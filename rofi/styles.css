@@ -1,0 +1,46 @@
+#custom-rofi,
+#custom-terminal,
+#custom-rofi-windows,
+#custom-rofi-clipboard,
+#network,
+#pulseaudio,
+#clock,
+#backlight,
+#tray,
+#battery {
+    padding: 5px 10px;
+    color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #303030;
+    background-color: #343434;
+    transition: background-color 0.3s;
+    margin: 5px;
+    min-width: 20px;
+}
+
+#custom-rofi-windows {
+    padding-top: 7px;
+    padding-bottom: 3px;
+}
+
+#custom-rofi:hover,
+#custom-terminal:hover,
+#custom-rofi-windows:hover,
+#network:hover,
+#pulseaudio:hover,
+#clock:hover,
+#backlight:hover,
+#tray:hover,
+#battery:hover {
+    background-color: #3a3a3a;
+    border: 1px solid #343434;
+}
+
+window#waybar {
+    background: #1e1e1e;
+}
+
+* {
+    font-family: "Droid Sans", "Sans Serif";
+    font-weight: 900;
+}
