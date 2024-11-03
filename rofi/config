@@ -1,0 +1,51 @@
+{
+    "layer": "top",
+    "modules-left": ["custom/rofi", "custom/rofi-windows", "custom/rofi-clipboard", "custom/terminal"],
+    "modules-center": ["clock"],
+    "modules-right": ["tray", "backlight", "pulseaudio", "battery"],
+    "custom/rofi": {
+        "format": "🗿",
+        "tooltip": false,
+        "on-click": "rofi -i -show drun -modi drun -show-icons"
+    },
+    "custom/terminal": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "alacritty"
+    },
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B \t   Week: %V }</big>\n<tt>{calendar}</tt>"
+    },
+    "custom/rofi-windows": {
+        "format": "🗗",
+        "tooltip": false,
+        "on-click": "rofi -i -show window -modi window -show-icons"
+    },
+    "custom/rofi-clipboard": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "rofi -modi clipboard:/usr/bin/cliphist-rofi -show clipboard"
+    },
+    "tray": {
+        "spacing": 5
+    },
+    "pulseaudio": {
+        "format": "{volume} ",
+        "format-muted": " muted",
+        "on-click": "pagui",
+        "volume-change-script": "pactl set-sink-volume @DEFAULT_SINK@ +{step}%",
+        "scroll-step": 5
+    },
+    "backlight": {
+        "format": "{percent}% 🔆",
+        "on-click": "brightnessgui",
+        "brightness-change-script": "brightnessctl s {step}%",
+        "scroll-step": 5
+    },
+    "battery": {
+        "format": "{capacity}% ",
+        "format-low": "{capacity}% ",
+        "format-critical": "{capacity}% ",
+        "tooltip": true
+    }
+}
